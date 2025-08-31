@@ -1,0 +1,88 @@
+---
+title: "📃 The Lot about Listings"
+# subtitle: "*Part 2 in the [Customizing Quarto](../CustomizingQuarto_project.qmd) series*"
+description: Make your index page look 🔥
+author: "Allison Day"
+date: "5/5/2023"
+categories: [Quarto]
+code-annotations: hover
+#4image: timp.jpg
+draft: true
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 2*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+---
+
+The `index.qmd` file is a listing page, which generates the page containing all of your posts.
+
+# Universal
+
+``` yaml
+listing:
+  contents: posts
+  sort: "date desc"
+  sort-ui: true
+  filter-ui: true
+  max-items: 100
+  pagination: 50
+  image-placeholder: placeholder.gif
+  image-height: 250em
+  categories: unnumbered
+  fields: [title, description, date, reading-time, categories]
+```
+
+## `contents`
+
+`contents` is the folder where your posts are located. It will display any `.qmd` file in the directory.
+
+It is important to note that the contents folder is relative to the listing file, in this case, the `index.qmd` file. For more on paths, see [here](https://quarto.org/docs/reference/globs.html).
+
+You can also list multiple paths, separated into bullet points. You can also [specify directories to exclude](https://quarto.org/docs/websites/website-listings.html#including-or-excluding-items) from your listing. For example, I have a folder called `posts/Projects` that I don't want to show up on my index page, so I have `!posts/Projects` in my `contents` field.
+
+``` yaml
+listing:
+  contents: 
+  - posts
+  - "!posts/Projects`
+```
+
+## `sort`
+
+`sort` is the order in which your posts will be listed. You can have multiple sort fields, separated into bullet points.
+
+``` yaml
+listing:
+  sort: 
+  - "date desc"
+  - "title asc"
+```
+
+## `sort-ui`
+
+`sort-ui` is a boolean that determines whether or not you want to have a sort drop down menu on your index page. You can also specify which fields you want to be able to sort by. [*🔗docs*](https://quarto.org/docs/websites/website-listings.html#sorting)
+
+``` yaml
+listing:
+  sort-ui: [title, date]
+```
+
+::: {.callout-note appearance="simple"}
+You can only sort by fields that are in your fields list.
+:::
+
+# `type`
+
+There are three types of listings: `default`, `table`, and `grid`. The default listing is the one you see on the index page. You can see all three here on the [Quarto website](https://quarto.org/docs/websites/website-listings.html#listing-types). Each listing type has fields that you can customize [here](https://quarto.org/docs/websites/website-listings.html#listing-fields).
+
+I use both the grid listing, for my projects, and the default listing, for all articles, on my index page.
+
+*Learn how to create a projects listing here: [🛠️ Making a Series](..\3MakingSeries\MakingSeries.qmd).*

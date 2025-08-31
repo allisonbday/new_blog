@@ -1,0 +1,29 @@
+---
+# https://quarto.org/docs/websites/website-listings.html
+# https://quarto.org/docs/websites/website-listings-custom.html#metadata-file-listings
+title: F1 Dashboard
+date: 08-30-2025
+subtitle: F1 Dashboard
+description: blah blah blah
+categories: [API, JSON, Streamlit]
+image: images\track.jpg
+
+listing: 
+    id: project-posts
+    contents: \*.qmd
+    fields: [date, title, reading-time, subtitle, description, categories, custom-blank, custom-num, image]
+    sort: custom-num
+    field-display-names: 
+        custom-num: "Series Number"
+        date: "Date"
+        title: "Title"
+        reading-time: "Reading Time"
+        subtitle: "Subtitle"
+        categories: "Categories"
+draft: false
+---
+
+# Posts
+
+::: {#project-posts}
+:::

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-30">
+<meta name="description" content="blah blah blah">
 
-<title>All Projects – Blog</title>
+<title>F1 Dashboard – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,20 +75,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-all_projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-project-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-reading-time','listing-subtitle','listing-description','listing-categories','listing-custom-blank','listing-custom-num','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-all_projects'] = new List('listing-all_projects', options);
+    window['quarto-listings']['listing-project-posts'] = new List('listing-project-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -130,19 +132,19 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Blog</span>
     </a>
   </div>
@@ -153,7 +155,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -174,74 +176,66 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">F1 Dashboard</h1>
+            <p class="subtitle lead">F1 Dashboard</p>
+                  <div>
+        <div class="description">
+          blah blah blah
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">API</div>
+                <div class="quarto-category">JSON</div>
+                <div class="quarto-category">Streamlit</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 30, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="QVBJ">API</div><div class="category" data-category="SlNPTg==">JSON</div><div class="category" data-category="UXVhcnRv">Quarto</div><div class="category" data-category="U3RyZWFtbGl0">Streamlit</div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">All Projects</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="posts" class="level1">
+<h1>Posts</h1>
+<div id="listing-project-posts" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="QVBJJTJDSlNPTg==" data-listing-date-sort="1699077600000" data-listing-file-modified-sort="1756615248665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_dashboard/1F1_api/f1_api.html" class="no-external">
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-all_projects">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-all_projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-all_projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="QVBJJTJDSlNPTiUyQ1N0cmVhbWxpdA==" data-listing-date-sort="1756533600000" data-listing-file-modified-sort="1756615466248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<a href="../../posts/Projects/f1_dashboard/F1_Dashboard_project.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img loading="lazy" src="../../posts/Projects/f1_dashboard/images/track.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-F1 Dashboard
-</h5>
-<div class="card-subtitle listing-subtitle">
-F1 Dashboard
+<img loading="lazy" src="../../../posts/Projects/f1_dashboard/1F1_api/images/wombat_profile.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title" data-anchor-id="posts">
+<a href="../../../posts/Projects/f1_dashboard/1F1_api/f1_api.html" class="no-external">F1 API</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_dashboard/1F1_api/f1_api.html" class="no-external">Accessing and Visualizing Formula 1 Data with Python</a>
 </div>
 <div class="listing-categories">
 
@@ -249,110 +243,72 @@ F1 Dashboard
 
 <div class="listing-category" onclick="window.quartoListingCategory('SlNPTg=='); return false;">JSON</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('U3RyZWFtbGl0'); return false;">Streamlit</div>
-
 </div>
-<div class="card-text listing-description delink">
-<p>blah blah blah</p>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_dashboard/1F1_api/f1_api.html" class="no-external">
+<p>Customizing the Quarto <code>About</code> page with text, embeds, and more!</p>
+</a></div>
 </div>
-<div class="card-attribution card-text-small end">
+<div class="metadata">
+<a href="../../../posts/Projects/f1_dashboard/1F1_api/f1_api.html" class="no-external">
 <div class="listing-date">
-Aug 30, 2025
+Nov 4, 2023
+</div>
+<div class="listing-reading-time">3 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 1</em>
+</div>
+</a>
 </div>
 </div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756612288737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<a href="../../posts/Projects/project_template copy 2/mount_corcoran.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img loading="lazy" src="../../posts/Projects/project_template copy 2/images/mount_corcoran_2014.79.4.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-mount corcoran 2014
-</h5>
-<div class="card-subtitle listing-subtitle">
-A painting of Mount Corcoran
+<div class="quarto-post image-right" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756613830011" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="312">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_dashboard/2ExamplePost/Listings.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../posts/Projects/f1_dashboard/2ExamplePost/Listings.html" class="no-external">📃 The Lot about Listings</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_dashboard/2ExamplePost/Listings.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
 
 </div>
-<div class="card-text listing-description delink">
-<p>A series covering how to customize your Quarto blog.</p>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_dashboard/2ExamplePost/Listings.html" class="no-external">
+<p>Make your index page look 🔥</p>
+</a></div>
 </div>
-<div class="card-attribution card-text-small end">
+<div class="metadata">
+<a href="../../../posts/Projects/f1_dashboard/2ExamplePost/Listings.html" class="no-external">
 <div class="listing-date">
 May 5, 2023
 </div>
+<div class="listing-reading-time">2 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
 </div>
+<div class="metadata-value listing-custom-num">
+<em>Part 2</em>
 </div>
-</div></a>
+</a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756610619608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<a href="../../posts/Projects/project_template copy/ProjectTemplate_project.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img loading="lazy" src="../../posts/Projects/project_template copy/images/Joean_Honoré_Fragonard_-_The_Swing.jpeg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Joean Honoré Fragonard - The Swing
-</h5>
-<div class="card-subtitle listing-subtitle">
-🎨 Exploring the Art and Story Behind the Rococo Masterpiece 🖼️
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>A series covering how to customize your Quarto blog.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-May 5, 2023
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756609927512" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<a href="../../posts/Projects/project_template/ProjectTemplate_project.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img loading="lazy" src="../../posts/Projects/project_template/images/2378986.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Customizing Your Quarto Blog
-</h5>
-<div class="card-subtitle listing-subtitle">
-Adding some ✨ pizzazz ✨ to your Quarto blog
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>A series covering how to customize your Quarto blog.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-May 5, 2023
-</div>
-</div>
-</div>
-</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

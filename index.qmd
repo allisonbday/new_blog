@@ -7,12 +7,13 @@ listing:
   - id: projects
     contents: "posts/Projects/*/*.qmd"
     sort-ui: false
+    sort: date desc
     filter-ui: false
     type: default
     grid-item-border: false
     grid-columns: 3
     page-size: 1
-    max-items: 5
+    max-items: 3
     image-height: 250px
     image-placeholder: style/images/placeholder_1.gif
     max-description-length: 250
