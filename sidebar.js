@@ -2,11 +2,9 @@
 // Scenic looping SVG path from bottom to top of page, dynamic height
 window.addEventListener('DOMContentLoaded', function () {
   function scenicLoopingPath(height, loops, amplitude, width) {
-    // Start at bottom center
     let d = `M${width/2} ${height}`;
     let step = height / loops;
     for (let i = 0; i < loops; i++) {
-      // Alternate left/right for scenic effect
       let direction = i % 2 === 0 ? 1 : -1;
       let controlX = width/2 + direction * amplitude;
       let controlY = height - (i * step + step/2);
@@ -17,11 +15,43 @@ window.addEventListener('DOMContentLoaded', function () {
     return d;
   }
 
+  function createSidebarSVG(sidebar, top, height) {
+    // Remove existing SVG if present
+    let oldSvg = sidebar.querySelector('svg');
+    if (oldSvg) oldSvg.remove();
+
+    let width = 100;
+    let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  svg.style.display = 'block';
+  svg.style.margin = '0';
+  svg.style.width = width + 'px';
+  svg.style.position = 'absolute';
+  svg.style.top = top + 'px';
+  svg.style.transform = 'translateX(-5%)';
+  svg.style.right = '';
+  svg.style.alignSelf = '';
+
+    let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    let loops = Math.max(8, Math.floor(height/120));
+    let amplitude = 40;
+    let d = scenicLoopingPath(height, loops, amplitude, width);
+    path.setAttribute('d', d);
+    path.setAttribute('stroke', '#bfa77a');
+    path.setAttribute('stroke-width', '4');
+    path.setAttribute('stroke-dasharray', '12 14');
+    path.setAttribute('fill', 'none');
+    svg.appendChild(path);
+    sidebar.appendChild(svg);
+    return {svg, path};
+  }
+
   function resizeSidebarSVG() {
     var listing = document.querySelector('.quarto-listing-default');
     var sidebar = document.querySelector('.blog-left-sidebar');
-    var svg = sidebar ? sidebar.querySelector('svg') : null;
-    if (listing && svg) {
+    if (listing && sidebar) {
       var posts = listing.querySelectorAll('.quarto-post');
       if (posts.length === 0) return;
       var firstPost = posts[0];
@@ -29,32 +59,21 @@ window.addEventListener('DOMContentLoaded', function () {
       var top = firstPost.offsetTop;
       var bottom = lastPost.offsetTop + lastPost.offsetHeight;
       var height = bottom - top;
-      var width = 100;
-      var loops = Math.max(8, Math.floor(height/120)); // more loops for shorter height
-      var amplitude = 40;
-      svg.setAttribute('height', height);
-      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-      svg.style.position = 'absolute';
-      svg.style.top = top + 'px';
-      svg.style.alignSelf = '';
-      var path = svg.querySelector('path');
-      if (path) {
-        var d = scenicLoopingPath(height, loops, amplitude, width);
-        path.setAttribute('d', d);
-      }
+
+      // Create SVG and path dynamically
+      var {svg, path} = createSidebarSVG(sidebar, top, height);
+
+
     }
   }
   resizeSidebarSVG();
-    // Fix initial alignment by recalculating after posts render
-    setTimeout(resizeSidebarSVG, 100);
-    window.addEventListener('resize', resizeSidebarSVG);
-
-    // Dynamically update SVG when posts are added/removed/filtered
-    var listing = document.querySelector('.quarto-listing-default');
-    if (listing) {
-      var observer = new MutationObserver(function(mutationsList, observer) {
-        resizeSidebarSVG();
-      });
-      observer.observe(listing, { childList: true, subtree: true });
-    }
+  setTimeout(resizeSidebarSVG, 100);
+  window.addEventListener('resize', resizeSidebarSVG);
+  var listing = document.querySelector('.quarto-listing-default');
+  if (listing) {
+    var observer = new MutationObserver(function(mutationsList, observer) {
+      resizeSidebarSVG();
+    });
+    observer.observe(listing, { childList: true, subtree: true });
+  }
 });
