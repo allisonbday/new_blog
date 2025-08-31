@@ -4,15 +4,16 @@ let lastEmojiData = { height: null, emojis: [] };
 window.addEventListener('DOMContentLoaded', function () {
   // Generate a smooth sine wave SVG path
   function scenicLoopingPath(height, loops, amplitude, width) {
-    let d = `M${width/2} ${height}`;
+  let centerOffset = width * 0.25;
+  let d = `M${centerOffset} ${height}`;
     let step = height / loops;
     let freq = 5;
     for (let i = 0; i < loops; i++) {
       let t0 = i / loops;
       let t1 = (i+1) / loops;
-      let controlX = width/2 + Math.sin(Math.PI * freq * (t0 + t1)/2) * amplitude;
+  let controlX = centerOffset + Math.sin(Math.PI * freq * (t0 + t1)/2) * amplitude;
       let controlY = height - (i * step + step/2);
-      let endX = width/2 + Math.sin(Math.PI * freq * t1) * amplitude;
+  let endX = centerOffset + Math.sin(Math.PI * freq * t1) * amplitude;
       let endY = height - ((i+1) * step);
       d += ` Q${controlX} ${controlY} ${endX} ${endY}`;
     }
@@ -76,15 +77,16 @@ window.addEventListener('DOMContentLoaded', function () {
     let amplitude = Math.max(40, Math.min(svgWidth * 0.45, height * 0.18));
     // Draw the path using the full SVG width
     let d = (function(height, loops, amplitude, width) {
-      let d = `M${width/2} ${height}`;
+      let centerOffset = width * 0.25;
+      let d = `M${centerOffset} ${height}`;
       let step = height / loops;
       let freq = 5;
       for (let i = 0; i < loops; i++) {
         let t0 = i / loops;
         let t1 = (i+1) / loops;
-        let controlX = width/2 + Math.sin(Math.PI * freq * (t0 + t1)/2) * amplitude;
+        let controlX = centerOffset + Math.sin(Math.PI * freq * (t0 + t1)/2) * amplitude;
         let controlY = height - (i * step + step/2);
-        let endX = width/2 + Math.sin(Math.PI * freq * t1) * amplitude;
+        let endX = centerOffset + Math.sin(Math.PI * freq * t1) * amplitude;
         let endY = height - ((i+1) * step);
         d += ` Q${controlX} ${controlY} ${endX} ${endY}`;
       }
@@ -132,32 +134,33 @@ window.addEventListener('DOMContentLoaded', function () {
       lastEmojiData.emojis = emojiData;
     }
     for (let i = 0; i < emojiData.length; i++) {
-      let {emoji, t, variance} = emojiData[i];
-      let pos = path.getPointAtLength(t * len);
-      let loops = Math.max(8, Math.floor(height/120));
-      let amplitude = Math.max(40, Math.min(90, height * 0.18));
-      let freq = 5;
-      let tWave = t;
-      // Use the new svgWidth for emoji placement
-      let xWave = svgWidth/2 + Math.sin(Math.PI * freq * tWave) * amplitude;
-      let minX = svgWidth/2 - amplitude;
-      let maxX = svgWidth/2 + amplitude;
-      let xEmojiRaw = xWave + variance * amplitude * 2.4;
-      let xEmoji = Math.max(minX, Math.min(maxX, xEmojiRaw));
-      let distance = Math.abs(xEmoji - xWave);
-      let maxDist = amplitude * 1.2;
-      // Vary emoji size randomly between 1.2rem and 2.4rem
-      let size = 1.2 + Math.random() * 3;
-      let el = document.createElement('span');
-      el.textContent = emoji;
-      el.className = 'sidebar-emoji';
-      el.style.position = 'absolute';
-      el.style.fontSize = size + 'rem';
-      el.style.pointerEvents = 'none';
-      el.style.left = xEmoji + 'px';
-      el.style.top = (top + pos.y - 18) + 'px';
-      el.style.zIndex = '0';
-      el.animate([
+  let {emoji, t, variance} = emojiData[i];
+  let pos = path.getPointAtLength(t * len);
+  let loops = Math.max(8, Math.floor(height/120));
+  let amplitude = Math.max(40, Math.min(90, height * 0.18));
+  let freq = 5;
+  let tWave = t;
+  // Offset emoji path by 25% from center
+  let centerOffset = svgWidth * 0.25;
+  let xWave = centerOffset + Math.sin(Math.PI * freq * tWave) * amplitude;
+  let minX = centerOffset - amplitude;
+  let maxX = centerOffset + amplitude;
+  let xEmojiRaw = xWave + variance * amplitude * 2.4;
+  let xEmoji = Math.max(minX, Math.min(maxX, xEmojiRaw));
+  let distance = Math.abs(xEmoji - xWave);
+  let maxDist = amplitude * 1.2;
+  // Vary emoji size randomly between 1.2rem and 2.4rem
+  let size = 1.2 + Math.random() * 3;
+  let el = document.createElement('span');
+  el.textContent = emoji;
+  el.className = 'sidebar-emoji';
+  el.style.position = 'absolute';
+  el.style.fontSize = size + 'rem';
+  el.style.pointerEvents = 'none';
+  el.style.left = xEmoji + 'px';
+  el.style.top = (top + pos.y - 18) + 'px';
+  el.style.zIndex = '0';
+  el.animate([
         { transform: 'translateY(0px)' },
         { transform: 'translateY(-8px)' },
         { transform: 'translateY(0px)' }
