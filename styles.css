@@ -1,3 +1,161 @@
+/* Force center the filter bar for posts listing */
+#posts .quarto-listing-filter,
+#posts .quarto-listing-filter > div,
+#posts .quarto-listing-filter .quarto-listing-filter-container,
+#posts .quarto-listing-filter .quarto-listing-filter-group {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none !important;
+	max-width: 100% !important;
+}
+/* Improved centering for the filter bar in posts listing */
+#posts .quarto-listing-filter,
+#posts .quarto-listing-filter .quarto-listing-filter-container,
+#posts .quarto-listing-filter .quarto-listing-filter-group {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	width: 100%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+/* Center the filter bar for posts */
+#posts .quarto-listing-filter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+/* Sidebar sort buttons */
+.sidebar-sort-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin: 2em 0 2em 0;
+	padding: 1.2em 1.2em 1.2em 1.2em;
+	background: #f5f3ea;
+	border: 2px solid #bfa77a;
+	border-radius: 16px;
+	box-shadow: 0 2px 8px rgba(120, 90, 60, 0.07);
+	gap: 0.7em;
+}
+.sidebar-sort-label {
+	font-size: 1.1em;
+	color: #a67c52;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	align-self: flex-start;
+}
+.sidebar-sort-btn {
+	background: #ede6d6;
+	color: #7c5c3e;
+	border: 1.5px solid #bfa77a;
+	border-radius: 8px;
+	font-size: 1.05em;
+	padding: 0.5em 1.3em;
+	margin: 0.1em 0;
+	cursor: pointer;
+	transition: background 0.15s, color 0.15s, border 0.15s, box-shadow 0.15s;
+	box-shadow: 0 1px 4px rgba(120, 90, 60, 0.06);
+}
+.sidebar-sort-btn.active, .sidebar-sort-btn:focus {
+	background: #a67c52;
+	color: #fff;
+	border-color: #a67c52;
+	outline: none;
+	box-shadow: 0 2px 8px #a67c5244;
+}
+.sidebar-sort-btn:hover {
+	background: #bfa77a;
+	color: #fff;
+	border-color: #a67c52;
+}
+/* Stylize the sort dropdown and icon for listings */
+.quarto-listing-sort {
+	background: #f5f3ea;
+	border: 2px solid #bfa77a;
+	border-radius: 14px;
+	padding: 0.3em 1em 0.3em 0.7em;
+	margin-bottom: 2em;
+	box-shadow: 0 2px 8px rgba(120, 90, 60, 0.07);
+	display: flex;
+	align-items: center;
+	max-width: 340px;
+}
+.quarto-listing-sort .input-group-text {
+	background: transparent;
+	border: none;
+	color: #a67c52;
+	font-size: 1.2em;
+	padding-right: 0.5em;
+}
+.quarto-listing-sort .form-select {
+	background: #ede6d6;
+	border: 1.5px solid #bfa77a;
+	border-radius: 8px;
+	color: #4b3f2f;
+	font-size: 1.08em;
+	padding: 0.4em 1.2em 0.4em 0.7em;
+	box-shadow: none;
+	outline: none;
+	transition: border 0.15s, box-shadow 0.15s;
+}
+.quarto-listing-sort .form-select:focus {
+	border-color: #a67c52;
+	box-shadow: 0 0 0 2px #a67c5244;
+}
+.quarto-listing-default .quarto-post {
+	transition: transform 0.18s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s;
+}
+.quarto-listing-default .quarto-post:hover {
+	transform: scale(1.045) translateY(-8px) rotate(-0.5deg);
+	box-shadow: 0 10px 36px 0 rgba(120, 90, 60, 0.18), 0 0 0 2.5px #a67c5288;
+	z-index: 4;
+	border-color: #a67c52;
+}
+.quarto-listing-default .quarto-post:hover .thumbnail img,
+.quarto-listing-default .quarto-post:hover img {
+	filter: brightness(1.06) saturate(1.08) drop-shadow(0 1px 8px #a67c5288);
+	transition: filter 0.18s, box-shadow 0.18s;
+}
+.quarto-listing-default .quarto-post:hover .listing-title {
+	color: #a67c52;
+	text-shadow: 0 1px 4px #f5f3ea, 0 1px 0 #bfa77a;
+}
+#projects .quarto-listing-default {
+	position: relative;
+}
+#projects .quarto-listing-default .quarto-post {
+	transition: transform 0.18s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s;
+	z-index: 1;
+}
+#projects .quarto-listing-default .quarto-post:hover {
+	transform: scale(1.09) translateY(-16px) rotate(-1.5deg);
+	box-shadow: 0 18px 48px 0 rgba(120, 90, 60, 0.28), 0 0 0 4px #a67c52aa;
+	z-index: 5;
+	border-color: #a67c52;
+}
+#projects .quarto-listing-default .quarto-post:hover .thumbnail img,
+#projects .quarto-listing-default .quarto-post:hover img {
+	filter: brightness(1.08) saturate(1.12) drop-shadow(0 2px 12px #a67c52aa);
+	transition: filter 0.18s, box-shadow 0.18s;
+}
+#projects .quarto-listing-default .quarto-post:hover .listing-title {
+	color: #a67c52;
+	text-shadow: 0 2px 8px #f5f3ea, 0 1px 0 #bfa77a;
+}
+#projects .quarto-listing-default .quarto-post:hover ~ .quarto-post {
+	transform: translateX(32px);
+}
+#projects .quarto-listing-default .quarto-post:has(~ .quarto-post:hover) {
+	transform: translateX(-32px);
+}
 #projects .quarto-listing-default .quarto-post {
 	transition: transform 0.18s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s;
 }
@@ -293,6 +451,26 @@ body, .quarto-body {
 h1, h2, h3, h4, h5, h6 {
 	color: #7c5c3e;
 	font-family: 'Georgia', 'Times New Roman', serif;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	text-shadow: 0 2px 8px #f5f3ea, 0 1px 0 #bfa77a44;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	line-height: 1.18;
+}
+h1, h2 {
+	position: relative;
+	padding-bottom: 0.25em;
+}
+h1::after, h2::after {
+	content: "";
+	display: block;
+	width: 2.5em;
+	height: 4px;
+	background: linear-gradient(90deg, #a67c52 0%, #bfa77a 100%);
+	border-radius: 2px;
+	margin: 0.3em auto 0 auto;
+	opacity: 0.7;
 }
 
 a {

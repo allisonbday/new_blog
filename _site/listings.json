@@ -4,8 +4,10 @@
     "items": [
       "/posts/Projects/project_template/ProjectTemplate_project.html",
       "/posts/Projects/project_template copy/ProjectTemplate_project.html",
+      "/posts/Projects/project_template copy 2/mount_corcoran.html",
       "/posts/Projects/project_template/1ExamplePost/AboutPage.html",
       "/posts/Projects/project_template copy/1ExamplePost/AboutPage.html",
+      "/posts/Projects/project_template copy 2/1ExamplePost/AboutPage.html",
       "/posts/post-with-code/index.html",
       "/posts/post-with-code copy 2/index.html",
       "/posts/post-with-code copy/index.html",
@@ -15,6 +17,7 @@
   {
     "listing": "/posts/Projects/all_projects.html",
     "items": [
+      "/posts/Projects/project_template copy 2/mount_corcoran.html",
       "/posts/Projects/project_template copy/ProjectTemplate_project.html",
       "/posts/Projects/project_template/ProjectTemplate_project.html"
     ]
@@ -29,6 +32,19 @@
     "listing": "/posts/Projects/project_template copy/ProjectTemplate_project.html",
     "items": [
       "/posts/Projects/project_template copy/1ExamplePost/AboutPage.html"
+    ]
+  },
+  {
+    "listing": "/posts/Projects/project_template copy 2/ProjectTemplate_project.html",
+    "items": [
+      "/posts/Projects/project_template copy 2/1ExamplePost/AboutPage.html"
+    ]
+  },
+  {
+    "listing": "/posts/Projects/project_template copy 2/mount_corcoran.html",
+    "items": [
+      "/posts/Projects/project_template copy 2/1ExamplePost/AboutPage.html",
+      "/posts/Projects/project_template copy 2/2ExamplePost/Listings.html"
     ]
   }
 ]
