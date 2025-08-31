@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Unicorns are among us\n\n\n\nnews\n\ncode\n\n\n\nDiscover the magical world of unicorns! This post explores the myths, legends, and fascinating facts about these enchanting creatures. Learn how unicorns have inspired stories, art, and imagination throughout history.\n\n\n\n\n\nAug 31, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nThis is a detailed description of the post. In this article, we explore how to include and execute code within a Quarto document. The post covers best practices for embedding code blocks, formatting output, and integrating narrative text with code results. Readers will learn how to structure technical content effectively, making it accessible and engaging for a wide audience. Whether you are documenting a data analysis project, sharing programming tips, or writing a technical blog, this guide provides practical examples and clear explanations to help you get started with Quarto.\n\n\n\n\n\nAug 30, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nSIMP: Squirls In My Pants\n\n\n\nnews\n\n\n\nSIMP: Squirls In My Pants is a lighthearted exploration of quirky coding challenges inspired by everyday moments. This post shares the development journey, highlights creative solutions, and provides practical code examples for readers interested in fun and engaging programming projects.\n\n\n\n\n\nAug 27, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 27, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code copy 2/index.html",
+    "href": "posts/post-with-code copy 2/index.html",
+    "title": "SIMP: Squirls In My Pants",
+    "section": "",
+    "text": "This is a post with executable code. Here is some more content to fill out the post. You can write about your project, share insights, or explain your code."
+  },
+  {
+    "objectID": "posts/post-with-code copy 2/index.html#section-1",
+    "href": "posts/post-with-code copy 2/index.html#section-1",
+    "title": "SIMP: Squirls In My Pants",
+    "section": "Section 1",
+    "text": "Section 1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis quam felis id mauris."
+  },
+  {
+    "objectID": "posts/post-with-code copy 2/index.html#section-2",
+    "href": "posts/post-with-code copy 2/index.html#section-2",
+    "title": "SIMP: Squirls In My Pants",
+    "section": "Section 2",
+    "text": "Section 2\n\nPoint one about the topic.\nPoint two with more details.\nPoint three to elaborate further.\n\n\nSubsection\nVivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code. Here is some more content to fill out the post. You can write about your project, share insights, or explain your code."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#section-1",
+    "href": "posts/post-with-code/index.html#section-1",
+    "title": "Post With Code",
+    "section": "Section 1",
+    "text": "Section 1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis quam felis id mauris."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#section-2",
+    "href": "posts/post-with-code/index.html#section-2",
+    "title": "Post With Code",
+    "section": "Section 2",
+    "text": "Section 2\n\nPoint one about the topic.\nPoint two with more details.\nPoint three to elaborate further.\n\n\nSubsection\nVivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta."
+  },
+  {
+    "objectID": "posts/post-with-code copy/index.html",
+    "href": "posts/post-with-code copy/index.html",
+    "title": "Unicorns are among us",
+    "section": "",
+    "text": "This is a post with executable code. Here is some more content to fill out the post. You can write about your project, share insights, or explain your code."
+  },
+  {
+    "objectID": "posts/post-with-code copy/index.html#section-1",
+    "href": "posts/post-with-code copy/index.html#section-1",
+    "title": "Unicorns are among us",
+    "section": "Section 1",
+    "text": "Section 1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis quam felis id mauris."
+  },
+  {
+    "objectID": "posts/post-with-code copy/index.html#section-2",
+    "href": "posts/post-with-code copy/index.html#section-2",
+    "title": "Unicorns are among us",
+    "section": "Section 2",
+    "text": "Section 2\n\nPoint one about the topic.\nPoint two with more details.\nPoint three to elaborate further.\n\n\nSubsection\nVivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]

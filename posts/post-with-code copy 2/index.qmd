@@ -1,0 +1,29 @@
+---
+project_status: "In Progress"
+github: "https://github.com/yourusername/post-with-code"
+title: "SIMP: Squirls In My Pants"
+author: "Harlow Malloc"
+date: "2025-08-27"
+categories: [news,]
+image: "image.jpg"
+description: |
+    SIMP: Squirls In My Pants is a lighthearted exploration of quirky coding challenges inspired by everyday moments. This post shares the development journey, highlights creative solutions, and provides practical code examples for readers interested in fun and engaging programming projects.
+---
+This is a post with executable code.
+Here is some more content to fill out the post. You can write about your project, share insights, or explain your code.
+
+## Section 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis quam felis id mauris.
+
+## Section 2
+
+- Point one about the topic.
+- Point two with more details.
+- Point three to elaborate further.
+
+### Subsection
+
+Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
+
+

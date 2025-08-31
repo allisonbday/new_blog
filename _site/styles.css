@@ -1,0 +1,251 @@
+/* Left sidebar column */
+
+/* Shift main content to the right to accommodate sidebar */
+.quarto-listing-default {
+	margin-left: 70px;
+}
+/* Center the listing cards on the website */
+.quarto-listing-default {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.quarto-listing-default .list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.quarto-listing-default .quarto-post {
+	margin-left: auto;
+	margin-right: auto;
+}
+.quarto-listing-default .quarto-post .body .listing-description {
+	display: -webkit-box;
+	-webkit-line-clamp: 16;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 24em;
+	line-clamp: 16;
+}
+/* Manual tags in description styled like categories */
+.listing-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3em;
+	justify-content: flex-end;
+	margin-top: 0.1em;
+	margin-bottom: 0.7em;
+	width: 100%;
+	align-items: flex-end;
+}
+.listing-tag {
+	background: #e9e2d0;
+	color: #7c5c3e;
+	border-radius: 6px;
+	padding: 0.2em 0.7em;
+	font-size: 0.95em;
+	border: 1px solid #bfa77a;
+}
+/* Hide author in post listing cards */
+.quarto-listing-default .quarto-post .listing-author {
+	display: none !important;
+}
+/* Hide post thumbnail image in listing cards */
+.quarto-listing-default .quarto-post .thumbnail {
+	display: none !important;
+}
+/* Cozy Core Theme - Earth Tones */
+
+body, .quarto-body {
+	background-color: #f5f3ea;
+	color: #4b3f2f;
+	font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #7c5c3e;
+	font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+a {
+	color: #a67c52;
+	text-decoration: underline;
+}
+a:hover {
+	color: #6b4f2c;
+}
+
+code, pre {
+	background-color: #ede6d6;
+	color: #5a4632;
+	border-radius: 6px;
+	padding: 2px 6px;
+}
+
+blockquote {
+	background: #e9e2d0;
+	border-left: 4px solid #bfa77a;
+	color: #5a4632;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+img {
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(120, 90, 60, 0.08);
+}
+
+/* Cozy accents */
+.quarto-title-banner {
+	background: linear-gradient(90deg, #e9e2d0 0%, #cfc2a0 100%);
+	color: #4b3f2f;
+}
+
+hr {
+	border: none;
+	border-top: 2px solid #bfa77a;
+	margin: 2em 0;
+}
+
+/* Add more cozy, earth-tone styles as needed */
+
+/* Postcard-style blog post cards for Quarto default listing */
+.quarto-listing-default .quarto-post {
+	background: #fdf6ee;
+	border: 2.5px solid #bfa77a;
+	border-radius: 18px;
+	box-shadow: 0 4px 16px rgba(120, 90, 60, 0.07);
+	margin-bottom: 2em;
+	position: relative;
+	transition: box-shadow 0.2s;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	aspect-ratio: 6 / 4.25;
+	min-height: 110px;
+	max-width: 520px;
+	width: 100%;
+	padding: 0;
+}
+.quarto-listing-default .quarto-post:hover {
+	box-shadow: 0 8px 32px rgba(120, 90, 60, 0.13);
+}
+
+/* Left: title and description */
+/* Left: title and description */
+.quarto-listing-default .quarto-post .body {
+	flex: 4 1 0;
+	padding: 1.5em 0.1em 1.5em 1.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.quarto-listing-default .quarto-post .body .listing-title {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 0.2em;
+	margin-top: 0.2em;
+	font-size: 1.5em;
+	font-weight: bold;
+	order: 0;
+}
+.quarto-listing-default .quarto-post .body .listing-title a:hover {
+	color: #a67c52;
+}
+.quarto-listing-default .quarto-post .body .listing-categories {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3em;
+	justify-content: center;
+	margin-bottom: 0.3em;
+	margin-top: 0;
+	width: 100%;
+	align-items: center;
+	order: 1;
+}
+.quarto-listing-default .quarto-post .body .listing-description {
+	margin-top: 0.2em;
+	order: 2;
+	text-align: left;
+}
+/* Vertical bar */
+.quarto-listing-default .quarto-post::before {
+	content: "";
+	display: block;
+	width: 2.5px;
+	background: #bfa77a;
+	margin: 0.5em 0;
+	border-radius: 2px;
+	position: absolute;
+	top: 0.5em;
+	bottom: 0.5em;
+	left: 75%;
+	z-index: 1;
+}
+
+/* Right: meta info in bottom right corner below stamp */
+.quarto-listing-default .quarto-post .metadata {
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: relative;
+	min-width: 180px;
+	height: 100%;
+	padding: 4.5em 1.5em 1.5em 2em; /* extra top padding for stamp */
+}
+.quarto-listing-default .quarto-post .metadata-inner {
+	position: absolute;
+	right: 1.5em;
+	bottom: 1.2em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 2;
+}
+/* Move date further down and tags to the far right */
+.quarto-listing-default .quarto-post .listing-date {
+	margin-top: 2.5em;
+	margin-bottom: 0.1em;
+	text-align: right;
+	order: 1;
+}
+.quarto-listing-default .quarto-post .listing-categories {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3em;
+	justify-content: flex-end;
+	margin-top: 0.1em;
+	margin-bottom: 0.7em;
+	width: 100%;
+	align-items: flex-end;
+	order: 2;
+}
+.quarto-listing-default .quarto-post .listing-category {
+	background: #e9e2d0;
+	color: #7c5c3e;
+	border-radius: 6px;
+	padding: 0.2em 0.7em;
+	font-size: 0.95em;
+	border: 1px solid #bfa77a;
+}
+
+/* Stamp in the corner */
+.quarto-listing-default .quarto-post::after {
+	content: "\1F4C4"; /* Unicode for page with curl, looks like a stamp */
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	background: #e9e2d0;
+	border: 2px dashed #bfa77a;
+	border-radius: 6px;
+	padding: 0.3em 0.5em;
+	font-size: 1.5em;
+	box-shadow: 1px 1px 4px rgba(120, 90, 60, 0.10);
+	pointer-events: none;
+	z-index: 3;
+}
