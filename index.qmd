@@ -29,7 +29,7 @@ listing:
     # - custom-num desc
     type: default
     sort-ui: false
-    filter-ui: false
+    filter-ui: true
     categories: unnumbered
     fields: [title, subtitle, description, date, custom-blank,  custom-series, custom-num, reading-time, categories, image]
 
