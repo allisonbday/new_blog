@@ -1,0 +1,29 @@
+---
+# https://quarto.org/docs/websites/website-listings.html
+# https://quarto.org/docs/websites/website-listings-custom.html#metadata-file-listings
+title: Joean Honoré Fragonard - The Swing
+date: 05-05-2023
+subtitle: "🎨 Exploring the Art and Story Behind the Rococo Masterpiece 🖼️"
+description: "A series covering how to customize your Quarto blog."
+categories: [Quarto]
+image: images\Joean_Honoré_Fragonard_-_The_Swing.jpeg
+
+listing: 
+    id: project-posts
+    contents: \*.qmd
+    fields: [date, title, reading-time, subtitle, description, categories, custom-blank, custom-num, image]
+    sort: custom-num
+    field-display-names: 
+        custom-num: "Series Number"
+        date: "Date"
+        title: "Title"
+        reading-time: "Reading Time"
+        subtitle: "Subtitle"
+        categories: "Categories"
+draft: false
+---
+
+# Posts
+
+::: {#project-posts}
+:::

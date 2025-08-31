@@ -73,20 +73,49 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-custom-blank','listing-custom-series','listing-custom-num','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 1,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-custom-blank','listing-custom-series','listing-custom-num','listing-reading-time','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -198,68 +227,174 @@ window.Quarto = {
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="YW5hbHlzaXM=">analysis</div><div class="category" data-category="Y29kZQ==">code</div><div class="category" data-category="bmV3cw==">news</div><div class="category" data-category="UXVhcnRv">Quarto</div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-<div class="blog-left-sidebar">
-
-  <script src="sidebar.js"></script>
-
-</div>
 
 
 
 
 
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="projects" class="level1">
+<h1>Projects</h1>
+<p><sub><a href="./posts/Projects/all_projects.html"><em>All Projects</em></a></sub></p>
+<div id="listing-projects" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1756607872924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/all_projects.html" class="no-external">All Projects</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/all_projects.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/all_projects.html" class="no-external">
-A series covering how to customize your Quarto blog.
+<div class="quarto-post image-right" data-index="0" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756609927512" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="thumbnail"><a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">
+
+<img loading="lazy" src="./posts/Projects/project_template/images/2378986.jpg" class="thumbnail-image" style="height: 250px;">
+
 </a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/all_projects.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGU=" data-listing-date-sort="1756620000000" data-listing-file-modified-sort="1756601083391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
 <div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code copy/index.html" class="no-external">Unicorns are among us</a>
+<h3 class="no-anchor listing-title" data-anchor-id="projects">
+<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">Customizing Your Quarto Blog</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/post-with-code copy/index.html" class="no-external"></a>
+<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">Adding some ✨ pizzazz ✨ to your Quarto blog</a>
 </div>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
 
 </div>
-<div class="delink listing-description"><a href="./posts/post-with-code copy/index.html" class="no-external">
-<p>Discover the magical world of unicorns! This post explores the myths, legends, and fascinating facts about these enchanting creatures. Learn how unicorns have inspired stories, art, and imagination throughout history.</p>
+<div class="delink listing-description"><a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">
+<p>A series covering how to customize your Quarto blog.</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="./posts/post-with-code copy/index.html" class="no-external">
+<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">
 <div class="listing-date">
-Aug 31, 2025
+May 5, 2023
 </div>
 </a>
 </div>
 </div>
+<div class="quarto-post image-right" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756610619608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="thumbnail"><a href="./posts/Projects/project_template copy/ProjectTemplate_project.html" class="no-external">
+
+<img loading="lazy" data-src="./posts/Projects/project_template copy/images/Joean_Honoré_Fragonard_-_The_Swing.jpeg" class="thumbnail-image" style="height: 250px;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Projects/project_template copy/ProjectTemplate_project.html" class="no-external">Joean Honoré Fragonard - The Swing</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Projects/project_template copy/ProjectTemplate_project.html" class="no-external">🎨 Exploring the Art and Story Behind the Rococo Masterpiece 🖼️</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/Projects/project_template copy/ProjectTemplate_project.html" class="no-external">
+<p>A series covering how to customize your Quarto blog.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/Projects/project_template copy/ProjectTemplate_project.html" class="no-external">
+<div class="listing-date">
+May 5, 2023
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="projects-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+</section>
+<section id="all-posts" class="level1">
+<h1>All Posts</h1>
+<script>window.runSidebar && window.runSidebar();</script>
+<div id="listing-posts" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UXVhcnRv" data-listing-date-sort="1683180000000" data-listing-file-modified-sort="1756608008464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
+<div class="thumbnail"><a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
+
+<img loading="lazy" src="./posts/Projects/project_template/1ExamplePost/images/wombat_profile.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title" data-anchor-id="all-posts">
+<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">Make your <code>About</code> page about YOU</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">There are lots of ways to customize your Quarto <code>About</code> page. Here’s how I did it!</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
+<p>Customizing the Quarto <code>About</code> page with text, embeds, and more!</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
+<div class="listing-date">
+May 4, 2023
+</div>
+<div class="listing-reading-time">3 min</div>
+<div class="metadata-value listing-custom-blank">
+—
+</div>
+</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
+<strong><em></em></strong></a><strong><em><a href="posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd">Customizing Quarto Series</a></em></strong>
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 1</em>
+</div>
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1683180000000" data-listing-file-modified-sort="1756608008464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
+<div class="thumbnail"><a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">
+
+<img loading="lazy" src="./posts/Projects/project_template copy/1ExamplePost/images/wombat_profile.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">Make your <code>About</code> page about YOU</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">There are lots of ways to customize your Quarto <code>About</code> page. Here’s how I did it!</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">
+<p>Customizing the Quarto <code>About</code> page with text, embeds, and more!</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">
+<div class="listing-date">
+May 4, 2023
+</div>
+<div class="listing-reading-time">3 min</div>
+<div class="metadata-value listing-custom-blank">
+—
+</div>
+</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/project_template copy/1ExamplePost/AboutPage.html" class="no-external">
+<strong><em></em></strong></a><strong><em><a href="posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd">Customizing Quarto Series</a></em></strong>
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 1</em>
+</div>
+
+</div>
+</div>
 <div class="quarto-post image-right" data-index="2" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1756533600000" data-listing-file-modified-sort="1756596946612" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
@@ -285,10 +420,16 @@ Aug 31, 2025
 <div class="listing-date">
 Aug 30, 2025
 </div>
+<div class="listing-reading-time">1 min</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="3" data-categories="bmV3cw==" data-listing-date-sort="1756274400000" data-listing-file-modified-sort="1756601073978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+<div class="thumbnail"><a href="./posts/post-with-code copy 2/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/post-with-code copy 2/image.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/post-with-code copy 2/index.html" class="no-external">SIMP: Squirls In My Pants</a>
@@ -310,10 +451,49 @@ Aug 30, 2025
 <div class="listing-date">
 Aug 27, 2025
 </div>
+<div class="listing-reading-time">1 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bmV3cw==" data-listing-date-sort="1756274400000" data-listing-file-modified-sort="1756596968096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="quarto-post image-right" data-index="4" data-categories="bmV3cyUyQ2NvZGU=" data-listing-date-sort="1756620000000" data-listing-file-modified-sort="1756601083391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+<div class="thumbnail"><a href="./posts/post-with-code copy/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/post-with-code copy/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/post-with-code copy/index.html" class="no-external">Unicorns are among us</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/post-with-code copy/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/post-with-code copy/index.html" class="no-external">
+<p>Discover the magical world of unicorns! This post explores the myths, legends, and fascinating facts about these enchanting creatures. Learn how unicorns have inspired stories, art, and imagination throughout history.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/post-with-code copy/index.html" class="no-external">
+<div class="listing-date">
+Aug 31, 2025
+</div>
+<div class="listing-reading-time">1 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="bmV3cw==" data-listing-date-sort="1756274400000" data-listing-file-modified-sort="1756596968096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
+
+<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
@@ -335,71 +515,19 @@ This is the first post in a Quarto blog. Welcome!
 <div class="listing-date">
 Aug 27, 2025
 </div>
+<div class="listing-reading-time">1 min</div>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756607949107" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">Customizing Your Quarto Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">Adding some ✨ pizzazz ✨ to your Quarto blog</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">
-<p>A series covering how to customize your Quarto blog.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/project_template/ProjectTemplate_project.html" class="no-external">
-<div class="listing-date">
-May 5, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="UXVhcnRv" data-listing-date-sort="1683180000000" data-listing-file-modified-sort="1756608008464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">Make your <code>About</code> page about YOU</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">There are lots of ways to customize your Quarto <code>About</code> page. Here’s how I did it!</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
-<p>Customizing the Quarto <code>About</code> page with text, embeds, and more!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
-<div class="listing-date">
-May 4, 2023
-</div>
-<div class="metadata-value listing-custom-blank">
-—
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/project_template/1ExamplePost/AboutPage.html" class="no-external">
-<strong><em></em></strong></a><strong><em><a href="posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd">Customizing Quarto Series</a></em></strong>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 1</em>
-</div>
-
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

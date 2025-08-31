@@ -1,7 +1,7 @@
 
 
 
-window.addEventListener('DOMContentLoaded', function () {
+
 
 
   function createSidebarSVG(sidebar, top, height) {
@@ -111,24 +111,26 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  function resizeSidebarSVG() {
+
+  window.runSidebar = function() {
+    function resizeSidebarSVG() {
+      let listing = document.querySelector('.quarto-listing-default');
+      let sidebar = document.querySelector('.blog-left-sidebar');
+      if (!listing || !sidebar) return;
+      let posts = listing.querySelectorAll('.quarto-post');
+      if (!posts.length) return;
+      let firstPost = posts[0];
+      let lastPost = posts[posts.length - 1];
+      let top = firstPost.offsetTop;
+      let bottom = lastPost.offsetTop + lastPost.offsetHeight;
+      let height = bottom - top;
+      createSidebarSVG(sidebar, top, height);
+    }
+    resizeSidebarSVG();
+    window.addEventListener('resize', resizeSidebarSVG);
     let listing = document.querySelector('.quarto-listing-default');
-    let sidebar = document.querySelector('.blog-left-sidebar');
-    if (!listing || !sidebar) return;
-    let posts = listing.querySelectorAll('.quarto-post');
-    if (!posts.length) return;
-    let firstPost = posts[0];
-    let lastPost = posts[posts.length - 1];
-    let top = firstPost.offsetTop;
-    let bottom = lastPost.offsetTop + lastPost.offsetHeight;
-    let height = bottom - top;
-    createSidebarSVG(sidebar, top, height);
+    if (listing) {
+      let observer = new MutationObserver(resizeSidebarSVG);
+      observer.observe(listing, { childList: true, subtree: true });
+    }
   }
-  resizeSidebarSVG();
-  window.addEventListener('resize', resizeSidebarSVG);
-  let listing = document.querySelector('.quarto-listing-default');
-  if (listing) {
-    let observer = new MutationObserver(resizeSidebarSVG);
-    observer.observe(listing, { childList: true, subtree: true });
-  }
-});

@@ -1,3 +1,71 @@
+#projects .quarto-listing-default .quarto-post .listing-description {
+	display: none !important;
+}
+/* Poster style for projects listing */
+#projects .quarto-listing-default .quarto-post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+	min-width: 320px;
+	width: 100%;
+	aspect-ratio: 3/4;
+	min-height: 700px;
+	margin: 3em auto;
+	box-shadow: 0 14px 40px rgba(120, 90, 60, 0.15);
+	border-radius: 28px;
+	overflow: hidden;
+	font-size: 1.22em;
+	padding: 2.5em 2.5em 2.5em 2.5em;
+}
+
+/* Remove the vertical line for project posters */
+#projects .quarto-listing-default .quarto-post::before {
+	display: none !important;
+}
+
+/* Remove the stamp for project posters */
+#projects .quarto-listing-default .quarto-post::after {
+	display: none !important;
+}
+
+/* Always show the image at the top for project posters */
+#projects .quarto-listing-default .quarto-post .thumbnail,
+#projects .quarto-listing-default .quarto-post img {
+	display: block !important;
+	width: 100%;
+	aspect-ratio: 1 / 1 !important;
+	height: 520px !important;
+	max-width: 100%;
+	object-fit: cover;
+	border-radius: 0;
+	margin-bottom: 2.5em;
+	box-shadow: none;
+	min-height: 0;
+	min-width: 0;
+}
+#projects .quarto-listing-default .quarto-post .body {
+	width: 100%;
+	padding: 0 0 0 0;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex: 1 1 auto;
+	margin-top: 0;
+}
+#projects .quarto-listing-default .quarto-post .listing-title {
+	font-size: 2em;
+	margin-bottom: 0.1em;
+	text-align: center;
+	margin-top: 5.75em;
+}
+#projects .quarto-listing-default .quarto-post .listing-description {
+	font-size: 1.1em;
+	margin-bottom: 0.7em;
+	text-align: center;
+}
 .quarto-listing-default .quarto-post .listing-subtitle {
 	font-size: 1.1em;
 	color: #a67c52;
