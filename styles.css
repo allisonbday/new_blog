@@ -1,3 +1,33 @@
+.quarto-listing-default .quarto-post .listing-subtitle {
+	font-size: 1.1em;
+	color: #a67c52;
+	font-style: italic;
+	margin-bottom: 0.3em;
+	margin-top: 0.1em;
+	text-align: center;
+	letter-spacing: 0.01em;
+	opacity: 0.92;
+}
+
+.quarto-listing-default .quarto-post .metadata-value.listing-custom-blank {
+	text-align: right;
+	margin-left: auto;
+	margin-right: 0;
+	display: block;
+}
+
+
+/* Limit width and align custom-series on right side of cards */
+.quarto-listing-default .quarto-post .metadata-value.listing-custom-series {
+	max-width: 100px;
+	width: 100%;
+	text-align: right;
+	overflow-wrap: break-word;
+	white-space: normal;
+	margin-left: auto;
+	margin-right: 0;
+	display: block;
+}
 /* Left sidebar column */
 
 /* Shift main content to the right to accommodate sidebar */

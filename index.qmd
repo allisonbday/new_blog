@@ -6,9 +6,12 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
+  categories: unnumbered
+  fields: [title, subtitle, description, date, custom-blank,  custom-series, custom-num, categories]
   sort-ui: false
   filter-ui: false
 page-layout: full
 title-block-banner: true
+
+
 ---

@@ -1,0 +1,23 @@
+---
+title: "All Projects"
+listing:
+  - id: all_projects
+    contents: 
+    - "*/*.qmd"
+    - "!*/*/*.qmd"
+    sort: date desc
+    type: grid
+    grid-item-border: false
+    grid-columns: 1
+    page-size: 10
+    image-height: 250px
+    image-placeholder: ../../style/images/placeholder_1.gif
+    max-description-length: 250
+    categories: unnumbered
+    sort-ui: true
+    filter-ui: true
+    fields: [title, subtitle, description, date, categories, image]
+
+page-layout: full
+title-block-banner: false
+---
