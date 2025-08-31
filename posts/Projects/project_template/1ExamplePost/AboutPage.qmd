@@ -3,7 +3,7 @@ title: "Make your `About` page about YOU"
 subtitle: "There are lots of ways to customize your Quarto `About` page. Here's how I did it!"
 description: "Customizing the Quarto `About` page with text, embeds, and more!"
 author: "Allison Day"
-date: "5/4/2023"
+date: "11/4/2023"
 categories: [Quarto]
 image: images\wombat_profile.png
 title-block-banner: images/wombat_profile_banner.png
@@ -11,7 +11,7 @@ title-block-banner-color: white
 draft: false
 
 # Series info - used in `index.qmd`
-custom-blank: "---"
+custom-blank: "——————————"
 custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***"
 custom-num: "*Part 1*"
 

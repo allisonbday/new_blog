@@ -10,7 +10,7 @@ code-annotations: hover
 draft: true
 
 # Series info - used in `index.qmd`
-custom-blank: "---"
+custom-blank: "——————————"
 custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***" #todo: make this an index variable
 custom-num: "*Part 2*"
 

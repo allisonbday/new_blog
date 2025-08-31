@@ -1,3 +1,36 @@
+/* Stylize custom-blank field to match the horizontal line for series separator */
+.metadata-value.listing-custom-blank {
+	display: block;
+	border: none;
+	margin: 0.4em 0 0.4em 0;
+	width: 60%;
+	align-self: center;
+	background: none;
+	padding: 0;
+	color: inherit;
+}
+.metadata-value.listing-custom-blank:empty,
+.metadata-value.listing-custom-blank:where(:not(:empty)):not(:has(:not([style*="display:none"]))):not(:has(:not([style*="display: none"]))) {
+	/* If truly empty, hide text and show line */
+	border-top: 1.5px solid #bfa77a;
+	opacity: 0.7;
+	color: transparent;
+	height: 0;
+}
+.metadata-value.listing-custom-blank:where(:not(:empty)) {
+	/* If not empty, show value and no line */
+	border-top: none;
+	opacity: 1;
+	color: inherit;
+	height: auto;
+}
+.metadata-value.listing-custom-blank:where(:not(:empty)):not(:has(:not([style*="display:none"]))):not(:has(:not([style*="display: none"]))) {
+	/* If value is just dashes, treat as blank */
+	border-top: 1.5px solid #bfa77a;
+	opacity: 0.7;
+	color: transparent;
+	height: 0;
+}
 /* Force center the filter bar for posts listing */
 #posts .quarto-listing-filter,
 #posts .quarto-listing-filter > div,

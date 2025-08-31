@@ -11,7 +11,7 @@ title-block-banner-color: white
 draft: false
 
 # Series info - used in `index.qmd`
-custom-blank: "---"
+custom-blank: "——————————"
 custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***"
 custom-num: "*Part 1*"
 
