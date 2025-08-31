@@ -1,19 +1,20 @@
+// Store last emoji selection and height
+let lastEmojiData = { height: null, emojis: [] };
 
 // Scenic looping SVG path from bottom to top of page, dynamic height
 window.addEventListener('DOMContentLoaded', function () {
   function scenicLoopingPath(height, loops, amplitude, width) {
-    // Make the path more random and wavy, with higher ups/downs and wider as height increases
+    // Make the path a consistent, smooth sine wave
     let d = `M${width/2} ${height}`;
     let step = height / loops;
+    let freq = 5; // number of full sine waves in the column (more crests)
     for (let i = 0; i < loops; i++) {
-      let direction = i % 2 === 0 ? 1 : -1;
-      // Add randomness to amplitude and horizontal position
-      let ampRand = amplitude * (1.2 + Math.random() * 1.2); // up to 2.4x amplitude
-      let xRand = (width/2) + direction * ampRand * (0.7 + Math.random()*0.6); // more horizontal spread
-      let controlX = xRand;
-      let controlY = height - (i * step + step/2) + (Math.random()-0.5)*step*0.7; // random vertical
-      let endX = width/2 + (Math.random()-0.5)*width*0.18; // end point can wiggle left/right
-      let endY = height - ((i+1) * step) + (Math.random()-0.5)*step*0.7;
+      let t0 = i / loops;
+      let t1 = (i+1) / loops;
+      let controlX = width/2 + Math.sin(Math.PI * freq * (t0 + t1)/2) * amplitude;
+      let controlY = height - (i * step + step/2);
+      let endX = width/2 + Math.sin(Math.PI * freq * t1) * amplitude;
+      let endY = height - ((i+1) * step);
       d += ` Q${controlX} ${controlY} ${endX} ${endY}`;
     }
     return d;
@@ -36,7 +37,8 @@ window.addEventListener('DOMContentLoaded', function () {
   svg.style.width = width + 'px';
   svg.style.position = 'absolute';
   svg.style.top = top + 'px';
-  svg.style.transform = 'translateX(-5%)';
+  svg.style.left = '0';
+  svg.style.transform = '';
   svg.style.right = '';
   svg.style.alignSelf = '';
 
@@ -74,6 +76,78 @@ window.addEventListener('DOMContentLoaded', function () {
     path.setAttribute('fill', 'none');
     svg.appendChild(path);
     sidebar.appendChild(svg);
+
+  // Remove old emojis before adding new ones
+  Array.from(sidebar.querySelectorAll('.sidebar-emoji')).forEach(e => e.remove());
+  // Only pick new emojis if the height changes
+  const emojis = [
+    '⛰️','🌋','🍄','🫎','🐖','🦔','🦆','🐧','⛳','🎂','🐉', '🥕','🌵','🍂','🍀','🚀','✈️','🏁','🌊🏖️','⛺','🪤','🌝','🌞','☃️','🔥'
+  ];
+  let len = path.getTotalLength();
+  let emojiData;
+  // Scale emoji count with line height: 2 for short, up to 8 for very tall
+  let minEmojis = 2;
+  let maxEmojis = 8;
+  let minHeight = 200;
+  let maxHeight = 1200;
+  let scaledCount = Math.round(
+    minEmojis + (Math.min(height, maxHeight) - minHeight) / (maxHeight - minHeight) * (maxEmojis - minEmojis)
+  );
+  let emojiCount = Math.max(minEmojis, Math.min(maxEmojis, scaledCount));
+  if (lastEmojiData.height === height) {
+    emojiData = lastEmojiData.emojis;
+  } else {
+    emojiData = [];
+    // Shuffle a copy of the emojis array for unique selection
+    let shuffled = emojis.slice().sort(() => Math.random() - 0.5);
+    for (let i = 0; i < emojiCount; i++) {
+      let emoji = shuffled[i % shuffled.length];
+      // Evenly distribute t from 0 to 1
+      let t = (i + 0.5) / emojiCount;
+      let variance = (Math.random() - 0.5);
+      emojiData.push({emoji, t, variance});
+    }
+    lastEmojiData.height = height;
+    lastEmojiData.emojis = emojiData;
+  }
+  for (let i = 0; i < emojiData.length; i++) {
+    let {emoji, t, variance} = emojiData[i];
+    let pos = path.getPointAtLength(t * len);
+    let loops = Math.max(8, Math.floor(height/120));
+    let amplitude = Math.max(40, Math.min(90, height * 0.18));
+    let freq = 5;
+    let tWave = t;
+    let xWave = width/2 + Math.sin(Math.PI * freq * tWave) * amplitude;
+    // Clamp emoji x position to never go further than the max crest of the line
+    let minX = width/2 - amplitude;
+    let maxX = width/2 + amplitude;
+    let xEmojiRaw = xWave + variance * amplitude * 2.4;
+    let xEmoji = Math.max(minX, Math.min(maxX, xEmojiRaw));
+    let distance = Math.abs(xEmoji - xWave);
+    let maxDist = amplitude * 1.2;
+    let size = 1.2 + 1.2 * (distance / maxDist); // 1.2rem to 2.4rem
+    let el = document.createElement('span');
+    el.textContent = emoji;
+    el.className = 'sidebar-emoji';
+    el.style.position = 'absolute';
+    el.style.fontSize = size + 'rem';
+    el.style.pointerEvents = 'none';
+    el.style.left = xEmoji + 'px';
+    el.style.top = (top + pos.y - 18) + 'px';
+    el.style.zIndex = '4';
+    el.animate([
+      { transform: 'translateY(0px)' },
+      { transform: 'translateY(-8px)' },
+      { transform: 'translateY(0px)' }
+    ], {
+      duration: 1800 + Math.random()*1200,
+      iterations: Infinity,
+      direction: 'alternate',
+      easing: 'ease-in-out',
+      delay: Math.random()*2000
+    });
+    sidebar.appendChild(el);
+  }
     return {svg, path};
   }
 
