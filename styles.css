@@ -1,3 +1,11 @@
+#projects .quarto-listing-default .quarto-post {
+	transition: transform 0.18s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s;
+}
+#projects .quarto-listing-default .quarto-post:hover {
+	transform: scale(1.035);
+	box-shadow: 0 8px 32px rgba(120, 90, 60, 0.18);
+	z-index: 2;
+}
 #projects .listing-pagination .pagination {
 	display: flex;
 	gap: 0.7em;
