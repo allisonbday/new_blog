@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Allison Day">
+<meta name="dcterms.date" content="2025-09-01">
+<meta name="description" content="An app that lets users make their own F1 points systems and apply them to any season / race and see how standings change!">
 
-<title>Blog</title>
+<title>F1 Custom Points – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,48 +76,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-project-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-reading-time','listing-subtitle','listing-description','listing-categories','listing-custom-blank','listing-custom-num','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-custom-blank','listing-custom-series','listing-custom-num','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
+    window['quarto-listings']['listing-project-posts'] = new List('listing-project-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -158,19 +133,19 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Blog</span>
     </a>
   </div>
@@ -181,7 +156,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -202,86 +177,266 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">F1 Custom Points</h1>
+            <p class="subtitle lead">Creating a streamlit app for custom points</p>
+                  <div>
+        <div class="description">
+          <p>An app that lets users make their own F1 points systems and apply them to any season / race and see how standings change!</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Jupyter Notebooks</div>
+                <div class="quarto-category">Code Snippets</div>
+                <div class="quarto-category">Pandas</div>
+                <div class="quarto-category">APIs</div>
+                <div class="quarto-category">JSON</div>
+                <div class="quarto-category">VS Code</div>
+                <div class="quarto-category">Github</div>
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">Notion</div>
+                <div class="quarto-category">Web Scraping</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Allison Day </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 1, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><strong>On this page</strong></h2>
+   
+  <ul>
+  <li><a href="#posts" id="toc-posts" class="nav-link active" data-scroll-target="#posts">Posts</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="QVBJcw==">APIs</div><div class="category" data-category="Q29kZSUyMFNuaXBwZXRz">Code Snippets</div><div class="category" data-category="RGVzaWdu">Design</div><div class="category" data-category="R2l0aHVi">Github</div><div class="category" data-category="SlNPTg==">JSON</div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks</div><div class="category" data-category="Tm90aW9u">Notion</div><div class="category" data-category="UGFuZGFz">Pandas</div><div class="category" data-category="UGxhbm5pbmc=">Planning</div><div class="category" data-category="UHl0aG9u">Python</div><div class="category" data-category="UXVhcnRv">Quarto</div><div class="category" data-category="VlMlMjBDb2Rl">VS Code</div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping</div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<section id="projects" class="level1">
-<h1>Projects</h1>
-<p><sub><a href="./posts/Projects/all_projects.html"><em>All Projects</em></a></sub></p>
-<div id="listing-projects" class="quarto-listing quarto-listing-container-default">
+<section id="posts" class="level1">
+<h1>Posts</h1>
+<div id="listing-project-posts" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UHl0aG9uJTJDSnVweXRlciUyME5vdGVib29rcyUyQ0NvZGUlMjBTbmlwcGV0cyUyQ1BhbmRhcyUyQ0FQSXMlMkNKU09OJTJDVlMlMjBDb2RlJTJDR2l0aHViJTJDUXVhcnRvJTJDTm90aW9uJTJDV2ViJTIwU2NyYXBpbmc=" data-listing-date-sort="1756706400000" data-listing-file-modified-sort="1756845316320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/index_project.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1756706400000" data-listing-file-modified-sort="1756847606094" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
 
-<img loading="lazy" src="./posts/Projects/f1_custom_points/project_images/podium.jpg" class="thumbnail-image" style="height: 250px;">
+<img loading="lazy" src="../../../posts/Projects/f1_custom_points/1Plan/images/image.jpg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="projects">
-<a href="./posts/Projects/f1_custom_points/index_project.html" class="no-external">F1 Custom Points</a>
+<h3 class="no-anchor listing-title" data-anchor-id="posts">
+<a href="../../../posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">El Plan</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/index_project.html" class="no-external">Creating a streamlit app for custom points</a>
+<a href="../../../posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">Designing my F1 scoring app structure</a>
 </div>
 <div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('SnVweXRlciUyME5vdGVib29rcw=='); return false;">Jupyter Notebooks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29kZSUyMFNuaXBwZXRz'); return false;">Code Snippets</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGFuZGFz'); return false;">Pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QVBJcw=='); return false;">APIs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SlNPTg=='); return false;">JSON</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VlMlMjBDb2Rl'); return false;">VS Code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0aHVi'); return false;">Github</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm90aW9u'); return false;">Notion</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2ViJTIwU2NyYXBpbmc='); return false;">Web Scraping</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
 
 </div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/index_project.html" class="no-external">
-<p>An app that lets users make their own F1 points systems and apply them to any season / race and see how standings change!</p>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
+<p>Going through my thought process on how to design this F1 app</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="./posts/Projects/f1_custom_points/index_project.html" class="no-external">
+<a href="../../../posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
 <div class="listing-date">
 Sep 1, 2025
+</div>
+<div class="listing-reading-time">2 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 1</em>
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1746770400000" data-listing-file-modified-sort="1756845548565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
+
+<img loading="lazy" src="../../../posts/Projects/f1_custom_points/2Foundation/images/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">Foundation</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">Structuring a Rules Engine in Python with Dataclasses</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
+<p>This is a detailed description of a project example post. MAX 250</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
+<div class="listing-date">
+May 9, 2025
+</div>
+<div class="listing-reading-time">1 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 2</em>
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756845609596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
+
+<img loading="lazy" src="../../../posts/Projects/f1_custom_points/3Data/images/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../posts/Projects/f1_custom_points/3Data/index.html" class="no-external">I feel a need - a need for DATA</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_custom_points/3Data/index.html" class="no-external">Pulling Formula 1 Data with the Ergast API</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
+<p>This is a detailed description of a project example post. MAX 250</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
+<div class="listing-date">
+May 5, 2023
+</div>
+<div class="listing-reading-time">1 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 3</em>
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1757484000000" data-listing-file-modified-sort="1756845673908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
+
+<img loading="lazy" src="../../../posts/Projects/f1_custom_points/4Rules/images/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">Putting in the Reps</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">Calculating Formula 1 Standings with Custom Rules</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
+<p>This is a detailed description of a project example post. MAX 250</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
+<div class="listing-date">
+Sep 10, 2025
+</div>
+<div class="listing-reading-time">1 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 4</em>
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756845729346" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
+<div class="thumbnail"><a href="../../../posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
+
+<img loading="lazy" src="../../../posts/Projects/f1_custom_points/5Streamlit/images/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../../posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">BUILDING</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../../posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">Building an Interactive F1 Rules Explorer with Streamlit</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
+
+</div>
+<div class="delink listing-description"><a href="../../../posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
+<p>Going through my thought process on how to design this F1 app</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../../posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
+<div class="listing-date">
+May 5, 2023
+</div>
+<div class="listing-reading-time">1 min</div>
+<div class="metadata-value listing-custom-blank">
+——————————
+</div>
+<div class="metadata-value listing-custom-num">
+<em>Part 5</em>
 </div>
 </a>
 </div>
@@ -289,221 +444,11 @@ Sep 1, 2025
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-</section>
-<section id="all-posts" class="level1">
-<h1>All Posts</h1>
-<script>window.runSidebar && window.runSidebar();</script>
-<div id="listing-posts" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1757484000000" data-listing-file-modified-sort="1756845673908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Projects/f1_custom_points/4Rules/images/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="all-posts">
-<a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">Putting in the Reps</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">Calculating Formula 1 Standings with Custom Rules</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
-<p>This is a detailed description of a project example post. MAX 250</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="metadata-value listing-custom-blank">
-——————————
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/f1_custom_points/4Rules/index.html" class="no-external">
-<strong><em></em></strong></a><strong><em><a href="posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd">Customizing Quarto Series</a></em></strong>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 4</em>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1756706400000" data-listing-file-modified-sort="1756847606094" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Projects/f1_custom_points/1Plan/images/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">El Plan</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">Designing my F1 scoring app structure</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
-<p>Going through my thought process on how to design this F1 app</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
-<div class="listing-date">
-Sep 1, 2025
-</div>
-<div class="metadata-value listing-custom-blank">
-——————————
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/f1_custom_points/1Plan/index.html" class="no-external">
-<strong><em></em></strong></a><strong><em><a href="./posts/Projects/f1_custom_points/index_project.html">F1 Custom Points</a></em></strong>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 1</em>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UXVhcnRv" data-listing-date-sort="1746770400000" data-listing-file-modified-sort="1756845548565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Projects/f1_custom_points/2Foundation/images/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">Foundation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">Structuring a Rules Engine in Python with Dataclasses</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
-<p>This is a detailed description of a project example post. MAX 250</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
-<div class="listing-date">
-May 9, 2025
-</div>
-<div class="metadata-value listing-custom-blank">
-——————————
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/f1_custom_points/2Foundation/index.html" class="no-external">
-<strong><em></em></strong></a><strong><em><a href="./posts/Projects/f1_custom_points/index_project.html">Customizing Quarto Series</a></em></strong>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 2</em>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UGxhbm5pbmclMkNEZXNpZ24=" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756845729346" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Projects/f1_custom_points/5Streamlit/images/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">BUILDING</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">Building an Interactive F1 Rules Explorer with Streamlit</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGxhbm5pbmc='); return false;">Planning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWdu'); return false;">Design</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
-<p>Going through my thought process on how to design this F1 app</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
-<div class="listing-date">
-May 5, 2023
-</div>
-<div class="metadata-value listing-custom-blank">
-——————————
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/f1_custom_points/5Streamlit/index.html" class="no-external">
-***</a><a href="./posts/Projects/f1_custom_points/index_project.html">F1 Custom Points</a>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 5</em>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="UXVhcnRv" data-listing-date-sort="1683266400000" data-listing-file-modified-sort="1756845609596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
-<div class="thumbnail"><a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Projects/f1_custom_points/3Data/images/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">I feel a need - a need for DATA</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">Pulling Formula 1 Data with the Ergast API</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
-<p>This is a detailed description of a project example post. MAX 250</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
-<div class="listing-date">
-May 5, 2023
-</div>
-<div class="metadata-value listing-custom-blank">
-——————————
-</div>
-</a><div class="metadata-value listing-custom-series"><a href="./posts/Projects/f1_custom_points/3Data/index.html" class="no-external">
-<strong><em></em></strong></a><strong><em><a href="./posts/Projects/f1_custom_points/index_project.html">Customizing Quarto Series</a></em></strong>
-</div>
-<div class="metadata-value listing-custom-num">
-<em>Part 3</em>
-</div>
-
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="project_images/732dc431ce459bd317bc5c3c29f8d64a.jpg" class="img-fluid figure-img"></p>
+<figcaption>F1 Custom Points App</figcaption>
+</figure>
 </div>
 
 
@@ -851,25 +796,64 @@ May 5, 2023
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;

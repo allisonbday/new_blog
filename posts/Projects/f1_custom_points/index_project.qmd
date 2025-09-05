@@ -1,0 +1,50 @@
+---
+# https://quarto.org/docs/websites/website-listings.html
+# https://quarto.org/docs/websites/website-listings-custom.html#metadata-file-listings
+author: "Allison Day"
+code-annotations: hover
+
+title: "F1 Custom Points"
+subtitle : "Creating a streamlit app for custom points"
+date: "2025-09-01"
+categories: [Python, Jupyter Notebooks, Code Snippets, Pandas, APIs, JSON, VS Code, Github, Quarto, Notion, Web Scraping]
+github: "https://github.com/allisonbday/f1_custom_points"
+description: |
+    An app that lets users make their own F1 points systems and apply them to any season / race and see how standings change!
+# Images
+image: project_images\podium.jpg
+stamp: posts\Projects\f1_custom_points\project_images\f1_square_stamp.png
+# title-block-banner:
+# title-block-banner-color:
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+
+listing: 
+    id: project-posts
+    contents: \*.qmd
+    fields: [date, title, reading-time, subtitle, description, categories, custom-blank, custom-num, image]
+    sort: custom-num
+    field-display-names: 
+        custom-num: "Series Number"
+        date: "Date"
+        title: "Title"
+        reading-time: "Reading Time"
+        subtitle: "Subtitle"
+        categories: "Categories"
+
+
+draft: false
+---
+
+# Posts
+
+::: {#project-posts}
+:::
+
+![F1 Custom Points App](project_images/732dc431ce459bd317bc5c3c29f8d64a.jpg)

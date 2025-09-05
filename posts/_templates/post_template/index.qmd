@@ -1,0 +1,45 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: "TEMPLATE POST"
+subtitle : "this is a template post subtitle"
+date: "2099-08-30"
+categories: [Python, Jupyter Notebooks, Code Snippets, Pandas, APIs, JSON, VS Code, Github, Quarto, Notion, Web Scraping]
+github: "https://github.com/yourusername/post-with-code"
+description: |
+    This is a detailed description of the post. In this article, we explore how to include and execute code within a Quarto document. The post covers best practices for embedding code blocks, formatting output, and integrating narrative text with code results. Readers will learn how to structure technical content effectively, making it accessible and engaging for a wide audience. Whether you are documenting a data analysis project, sharing programming tips, or writing a technical blog, this guide provides practical examples and clear explanations to help you get started with Quarto.
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+# status
+draft: true
+---
+This is a post with executable code.
+Here is some more content to fill out the post. You can write about your project, share insights, or explain your code.
+
+## Section 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis quam felis id mauris.
+
+## Section 2
+
+- Point one about the topic.
+- Point two with more details.
+- Point three to elaborate further.
+
+### Subsection
+
+Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
+
+

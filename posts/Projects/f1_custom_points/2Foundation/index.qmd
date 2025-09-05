@@ -1,0 +1,49 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: "Foundation"
+subtitle: Structuring a Rules Engine in Python with Dataclasses
+date: "5/9/2025"
+categories: [Quarto]
+github: https://github.com/allisonbday/f1_custom_points
+description: |
+    This is a detailed description of a project example post. MAX 250
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[Customizing Quarto Series](posts/Projects/f1_custom_points/index_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 2*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+Post 2: Setting Up the Foundation
+
+Title idea: "Structuring a Rules Engine in Python with Dataclasses"
+
+Purpose: Start small, show off clean engineering design.
+
+Content:
+
+Introduce your PointsRules dataclass.
+
+Why you chose dataclasses.
+
+Make a few serialized JSON examples of scoring rules (1980s vs modern).
+
+Maybe a notebook that loads them and prints example points allocations.
+
+Deliverable: A working rules engine, even without race data yet.

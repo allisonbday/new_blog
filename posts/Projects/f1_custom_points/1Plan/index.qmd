@@ -1,0 +1,86 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: El Plan
+subtitle: Designing my F1 scoring app structure
+date: 2025/09/01
+categories: [Planning, Design]
+github: https://github.com/allisonbday/f1_custom_points
+description: |
+    Going through my thought process on how to design this F1 app
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[F1 Custom Points](posts/Projects/f1_custom_points/index_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 1*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+This project is inspired by [Mr V's Garage](https://youtu.be/5u08c8_WxSk?si=NZG-qJI6ISYAqghz "I tested EVERY points system to find the ULTIMATE 2021 F1 CHAMPION").
+
+After watching Mr V's video I immediately had a few questions. How would 1950s rules affect the current standings? How would rule changes affect all of the drivers and constructors championships? And most importantly - is there any way for Charles LeClerc to be champion?
+
+To answer these questions requires a system that can automatically fetch race results, clean test and store it, and a way for users explore custom rules. In data engineering terms - a pipeline, a database, and an interactive dashboard.
+
+# Architecture & Design
+
+```{mermaid, echo=false}
+flowchart 
+    %% Nodes
+    A["⏰ Scheduler"]:::process --> B["🏎️ Pull F1 API Data"]:::process
+    B --> C["🧹 Cleaning Script"]:::script
+    C --> D["🧪 Data Testing Script"]:::script
+    D --> E["🗄️ Database (Structured Schema)"]:::data
+    E --> F["📊 Streamlit App"]:::app
+    F --> G["⚙️ User Applies Custom Scoring Rules"]:::app
+
+    %% Classes
+    classDef script fill:#d0e7ff,stroke:#3399ff,stroke-width:1px
+    classDef data fill:#d0ffd6,stroke:#33cc33,stroke-width:1px
+    classDef app fill:#fff7c0,stroke:#ffcc33,stroke-width:1px
+    classDef process fill:#f0f0f0,stroke:#999999,stroke-width:1px
+```
+
+# Prototype Core Logic
+
+Build the smallest piece of logic independent of data sources (rules engine, algorithm, etc.).
+
+Deliverable: A working Python module, tested in isolation.
+
+# Data Acquisition & Cleaning
+
+Bring in external data → normalize → define your schema.
+
+Deliverable: Clean dataset & documented transformations.
+
+# Integration
+
+Connect ingestion + core logic. Test end-to-end flows with small datasets.
+
+Deliverable: Reproducible pipeline.
+
+# Interface / Presentation
+
+Build a way to interact with the system (dashboard, API, report).
+
+Deliverable: MVP app.
+
+# Iteration & Scalability
+
+Add features, optimize performance, handle edge cases, refactor.
+
+Deliverable: Polished v2.

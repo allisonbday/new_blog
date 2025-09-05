@@ -1,0 +1,45 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: I feel a need - a need for DATA
+subtitle: Pulling Formula 1 Data with the Ergast API
+date: "5/5/2023"
+categories: [Quarto]
+github: https://github.com/allisonbday/f1_custom_points
+description: |
+    This is a detailed description of a project example post. MAX 250
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[Customizing Quarto Series](posts/Projects/f1_custom_points/index_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 3*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+Title idea: "Pulling Formula 1 Data with the Ergast API"
+
+Purpose: Bring in external data → show you can handle APIs.
+
+Content:
+
+How to connect to the Ergast API (or FastF1 if you want lap times).
+
+Pull one season’s worth of race results.
+
+Normalize/clean the data into a table you control.
+
+Deliverable: A dataset you can feed into your rules engine.

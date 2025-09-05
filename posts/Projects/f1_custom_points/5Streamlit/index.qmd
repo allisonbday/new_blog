@@ -1,0 +1,47 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: BUILDING
+subtitle: Building an Interactive F1 Rules Explorer with Streamlit
+date: "5/5/2023"
+categories: [Planning, Design]
+github: https://github.com/allisonbday/f1_custom_points
+description: |
+    Going through my thought process on how to design this F1 app
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[F1 Custom Points](posts/Projects/f1_custom_points/index_project.qmd)" #todo: make this an index variable
+custom-num: "*Part 5*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+Post 5: Building a Streamlit App
+
+Title idea: "Building an Interactive F1 Rules Explorer with Streamlit"
+
+Purpose: Show off your portfolio frontend.
+
+Content:
+
+Basic app skeleton.
+
+Dropdown for year & ruleset.
+
+Display tables/plots of standings.
+
+Deliverable: MVP of your F1 rules explorer.

@@ -13,7 +13,7 @@ listing:
     grid-item-border: false
     grid-columns: 3
     page-size: 1
-    max-items: 3
+    max-items: 350
     image-height: 250px
     image-placeholder: style/images/placeholder_1.gif
     max-description-length: 250

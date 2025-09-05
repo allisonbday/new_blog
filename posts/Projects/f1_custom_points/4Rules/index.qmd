@@ -1,0 +1,49 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: Putting in the Reps
+subtitle: Calculating Formula 1 Standings with Custom Rules
+date: 2025/09/10
+categories: [Planning, Design]
+github: https://github.com/allisonbday/f1_custom_points
+description: |
+    This is a detailed description of a project example post. MAX 250
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 4*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+Post 4: Applying the Rules
+
+Title idea: "Calculating Formula 1 Standings with Custom Rules"
+
+Purpose: Glue Part 2 (rules) and Part 3 (data).
+
+Content:
+
+Take raw race results.
+
+Apply your PointsRules logic.
+
+Show how different rulesets produce different championship outcomes.
+
+Maybe demonstrate “what if 2008 was scored by 2024 rules?”
+
+Deliverable: A reproducible standings calculator.

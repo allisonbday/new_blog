@@ -2,27 +2,18 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Projects/f1_dashboard/F1_Dashboard_project.html",
-      "/posts/Projects/project_template copy 2/mount_corcoran.html",
-      "/posts/Projects/project_template copy/ProjectTemplate_project.html",
-      "/posts/Projects/project_template/ProjectTemplate_project.html",
-      "/posts/post-with-code copy/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/post-with-code copy 2/index.html",
-      "/posts/welcome/index.html",
-      "/posts/Projects/f1_dashboard/1F1_api/f1_api.html",
-      "/posts/Projects/project_template/1ExamplePost/AboutPage.html",
-      "/posts/Projects/project_template copy/1ExamplePost/AboutPage.html",
-      "/posts/Projects/project_template copy 2/1ExamplePost/AboutPage.html"
+      "/posts/Projects/f1_custom_points/index_project.html",
+      "/posts/Projects/f1_custom_points/4Rules/index.html",
+      "/posts/Projects/f1_custom_points/1Plan/index.html",
+      "/posts/Projects/f1_custom_points/2Foundation/index.html",
+      "/posts/Projects/f1_custom_points/5Streamlit/index.html",
+      "/posts/Projects/f1_custom_points/3Data/index.html"
     ]
   },
   {
     "listing": "/posts/Projects/all_projects.html",
     "items": [
-      "/posts/Projects/f1_dashboard/F1_Dashboard_project.html",
-      "/posts/Projects/project_template copy 2/mount_corcoran.html",
-      "/posts/Projects/project_template copy/ProjectTemplate_project.html",
-      "/posts/Projects/project_template/ProjectTemplate_project.html"
+      "/posts/Projects/f1_custom_points/index_project.html"
     ]
   },
   {
@@ -52,8 +43,23 @@
   {
     "listing": "/posts/Projects/f1_dashboard/F1_Dashboard_project.html",
     "items": [
-      "/posts/Projects/f1_dashboard/1F1_api/f1_api.html",
-      "/posts/Projects/f1_dashboard/2ExamplePost/Listings.html"
+      "/posts/Projects/f1_dashboard/1F1_api/f1_api.html"
+    ]
+  },
+  {
+    "listing": "/posts/Projects/project_template/index_project.html",
+    "items": [
+      "/posts/Projects/project_template/project-post_template/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/Projects/f1_custom_points/index_project.html",
+    "items": [
+      "/posts/Projects/f1_custom_points/1Plan/index.html",
+      "/posts/Projects/f1_custom_points/2Foundation/index.html",
+      "/posts/Projects/f1_custom_points/3Data/index.html",
+      "/posts/Projects/f1_custom_points/4Rules/index.html",
+      "/posts/Projects/f1_custom_points/5Streamlit/index.html"
     ]
   }
 ]

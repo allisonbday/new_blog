@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Allison Day">
+<meta name="dcterms.date" content="2025-09-01">
+<meta name="description" content="Going through my thought process on how to design this F1 app">
 
-<title>All Projects – Blog</title>
+<title>El Plan – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="../../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-all_projects .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-all_projects'] = new List('listing-all_projects', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Blog</span>
     </a>
   </div>
@@ -153,7 +99,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -174,114 +120,134 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="QVBJcw==">APIs</div><div class="category" data-category="Q29kZSUyMFNuaXBwZXRz">Code Snippets</div><div class="category" data-category="R2l0aHVi">Github</div><div class="category" data-category="SlNPTg==">JSON</div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks</div><div class="category" data-category="Tm90aW9u">Notion</div><div class="category" data-category="UGFuZGFz">Pandas</div><div class="category" data-category="UHl0aG9u">Python</div><div class="category" data-category="UXVhcnRv">Quarto</div><div class="category" data-category="VlMlMjBDb2Rl">VS Code</div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping</div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">All Projects</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">El Plan</h1>
+            <p class="subtitle lead">Designing my F1 scoring app structure</p>
+                  <div>
+        <div class="description">
+          <p>Going through my thought process on how to design this F1 app</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Planning</div>
+                <div class="quarto-category">Design</div>
+              </div>
+                  </div>
+  </div>
     
   
-    
-  </div>
-  
+  <div class="quarto-title-meta">
 
-
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-all_projects">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-all_projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-all_projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Allison Day </p>
+            </div>
     </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 1, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><strong>On this page</strong></h2>
+   
+  <ul>
+  <li><a href="#architecture-design" id="toc-architecture-design" class="nav-link active" data-scroll-target="#architecture-design">Architecture &amp; Design</a></li>
+  <li><a href="#prototype-core-logic" id="toc-prototype-core-logic" class="nav-link" data-scroll-target="#prototype-core-logic">Prototype Core Logic</a></li>
+  <li><a href="#data-acquisition-cleaning" id="toc-data-acquisition-cleaning" class="nav-link" data-scroll-target="#data-acquisition-cleaning">Data Acquisition &amp; Cleaning</a></li>
+  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">Integration</a></li>
+  <li><a href="#interface-presentation" id="toc-interface-presentation" class="nav-link" data-scroll-target="#interface-presentation">Interface / Presentation</a></li>
+  <li><a href="#iteration-scalability" id="toc-iteration-scalability" class="nav-link" data-scroll-target="#iteration-scalability">Iteration &amp; Scalability</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>This project is inspired by <a href="https://youtu.be/5u08c8_WxSk?si=NZG-qJI6ISYAqghz" title="I tested EVERY points system to find the ULTIMATE 2021 F1 CHAMPION">Mr V’s Garage</a>.</p>
+<p>After watching Mr V’s video I immediately had a few questions. How would 1950s rules affect the current standings? How would rule changes affect all of the drivers and constructors championships? And most importantly - is there any way for Charles LeClerc to be champion?</p>
+<p>To answer these questions requires a system that can automatically fetch race results, clean test and store it, and a way for users explore custom rules. In data engineering terms - a pipeline, a database, and an interactive dashboard.</p>
+<section id="architecture-design" class="level1">
+<h1>Architecture &amp; Design</h1>
+<p>Break problem into components: ingestion, processing, storage, presentation.</p>
+<p>Pick tools intentionally and justify them (“Dataclasses for structured configs”).</p>
+<p>Deliverable: Diagrams, schemas, maybe some pseudocode.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart 
+    %% Nodes
+    A["⏰ Scheduler"]:::process --&gt; B["🏎️ Pull F1 API Data"]:::process
+    B --&gt; C["🧹 Cleaning Script"]:::script
+    C --&gt; D["🧪 Data Testing Script"]:::script
+    D --&gt; E["🗄️ Database (Structured Schema)"]:::data
+    E --&gt; F["📊 Streamlit App"]:::app
+    F --&gt; G["⚙️ User Applies Custom Scoring Rules"]:::app
+
+    %% Classes
+    classDef script fill:#d0e7ff,stroke:#3399ff,stroke-width:1px
+    classDef data fill:#d0ffd6,stroke:#33cc33,stroke-width:1px
+    classDef app fill:#fff7c0,stroke:#ffcc33,stroke-width:1px
+    classDef process fill:#f0f0f0,stroke:#999999,stroke-width:1px
+</pre>
 </div>
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDSnVweXRlciUyME5vdGVib29rcyUyQ0NvZGUlMjBTbmlwcGV0cyUyQ1BhbmRhcyUyQ0FQSXMlMkNKU09OJTJDVlMlMjBDb2RlJTJDR2l0aHViJTJDUXVhcnRvJTJDTm90aW9uJTJDV2ViJTIwU2NyYXBpbmc=" data-listing-date-sort="1756706400000" data-listing-file-modified-sort="1756845316320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<a href="../../posts/Projects/f1_custom_points/index_project.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img loading="lazy" src="../../posts/Projects/f1_custom_points/project_images/podium.jpg" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-F1 Custom Points
-</h5>
-<div class="card-subtitle listing-subtitle">
-Creating a streamlit app for custom points
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SnVweXRlciUyME5vdGVib29rcw=='); return false;">Jupyter Notebooks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29kZSUyMFNuaXBwZXRz'); return false;">Code Snippets</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGFuZGFz'); return false;">Pandas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QVBJcw=='); return false;">APIs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SlNPTg=='); return false;">JSON</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VlMlMjBDb2Rl'); return false;">VS Code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0aHVi'); return false;">Github</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm90aW9u'); return false;">Notion</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('V2ViJTIwU2NyYXBpbmc='); return false;">Web Scraping</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>An app that lets users make their own F1 points systems and apply them to any season / race and see how standings change!</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Sep 1, 2025
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</section>
+<section id="prototype-core-logic" class="level1">
+<h1>Prototype Core Logic</h1>
+<p>Build the smallest piece of logic independent of data sources (rules engine, algorithm, etc.).</p>
+<p>Deliverable: A working Python module, tested in isolation.</p>
+</section>
+<section id="data-acquisition-cleaning" class="level1">
+<h1>Data Acquisition &amp; Cleaning</h1>
+<p>Bring in external data → normalize → define your schema.</p>
+<p>Deliverable: Clean dataset &amp; documented transformations.</p>
+</section>
+<section id="integration" class="level1">
+<h1>Integration</h1>
+<p>Connect ingestion + core logic. Test end-to-end flows with small datasets.</p>
+<p>Deliverable: Reproducible pipeline.</p>
+</section>
+<section id="interface-presentation" class="level1">
+<h1>Interface / Presentation</h1>
+<p>Build a way to interact with the system (dashboard, API, report).</p>
+<p>Deliverable: MVP app.</p>
+</section>
+<section id="iteration-scalability" class="level1">
+<h1>Iteration &amp; Scalability</h1>
+<p>Add features, optimize performance, handle edge cases, refactor.</p>
+<p>Deliverable: Polished v2.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -622,25 +588,64 @@ Sep 1, 2025
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;

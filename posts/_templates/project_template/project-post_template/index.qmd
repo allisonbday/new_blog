@@ -1,0 +1,43 @@
+---
+author: "Allison Day"
+code-annotations: hover
+
+title: "TEMPLATE PROJECT POST"
+subtitle: this is a subtitle
+date: "5/5/2023"
+categories: [Quarto]
+github: "https://github.com/yourusername/post-with-code"
+description: |
+    This is a detailed description of a project example post. MAX 250
+
+# Images
+image: images/image.jpg
+# title-block-banner:
+# title-block-banner-color:
+
+# Series info - used in `index.qmd`
+custom-blank: "——————————"
+custom-series: "***[Customizing Quarto Series](posts/Projects/CustomizingQuarto/CustomizingQuarto_project.qmd)***" #todo: make this an index variable
+custom-num: "*Part 1*"
+
+# Outline
+format: 
+  html: 
+    toc: true 
+    toc-location: left 
+    toc-title: "**On this page**" 
+
+draft: false
+---
+
+## Introduction
+
+This is a sample Quarto project post. Here you can describe your project, its goals, and key features.
+
+## Project Overview
+
+- **Language:** R / Python / Julia
+- **Tools:** Quarto, GitHub
+- **Purpose:** Demonstrate a simple project post structure.
+
+## Example Code
